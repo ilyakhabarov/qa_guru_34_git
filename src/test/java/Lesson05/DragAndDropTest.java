@@ -22,12 +22,13 @@ public class DragAndDropTest {
     static void beforeAll() {
         Configuration.browserSize = "1440x800";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.baseUrl = "https://the-internet.herokuapp.com";
 //        Configuration.holdBrowserOpen = true;
     }
 
     @Test
     void actionsDragAndDropTest() {
-        open("https://the-internet.herokuapp.com/drag_and_drop");
+        open("/drag_and_drop");
         SelenideElement squareA = $("#column-a");
         SelenideElement squareB = $("#column-b");
         squareA.shouldBe(visible);
@@ -39,7 +40,7 @@ public class DragAndDropTest {
 
     @Test
     void dragAndDropTest() {
-        open("https://the-internet.herokuapp.com/drag_and_drop");
+        open("/drag_and_drop");
         $("#column-a").dragAndDrop(DragAndDropOptions.to($("#column-b")));
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));

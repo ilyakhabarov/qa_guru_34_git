@@ -21,7 +21,7 @@ public class PracticeFormTests {
     String subject = "Computer Science";
     String checkbox1 = "Sports";
     String checkbox3 = "Music";
-    String uploadImage = "qa_guru_logo.png";
+    String uploadImage = "images/qa_guru_logo.png";
     String currentAddress = "Moscow, Russia";
     String state = "Rajasthan";
     String city = "Jaipur";
