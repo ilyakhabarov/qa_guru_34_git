@@ -26,7 +26,7 @@ public class TextBoxTests {
         $("#userEmail").setValue("alex@egorov.com");
         $("#currentAddress").setValue("Some street 1");
         $("#permanentAddress").setValue("Another street 1");
-        $("#submit").click();
+        $("#submit").scrollTo().click();
 
         $("#output #name").shouldHave(text("Alex"));
         $("#output #email").shouldHave(text("alex@egorov.com"));

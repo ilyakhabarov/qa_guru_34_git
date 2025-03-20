@@ -15,6 +15,10 @@ public class TextBoxFormPage {
     public TextBoxFormPage openPage() {
         open("/text-box");
         $(".text-center").shouldHave(text("Text Box"));
+        return this;
+    }
+
+    public TextBoxFormPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
@@ -35,15 +39,13 @@ public class TextBoxFormPage {
         return this;
     }
 
-    public TextBoxFormPage submitForm() {
+    public void submitForm() {
         submitButton.click();
-        return this;
     }
 
-    public TextBoxFormPage checkValidInput(String fullName, String userEmail, String currentAddress) {
+    public void checkValidInput(String fullName, String userEmail, String currentAddress) {
         $("#output #name").shouldHave(text(fullName));
         $("#output #email").shouldHave(text(userEmail));
         $("#output #currentAddress").shouldHave(text(currentAddress));
-        return this;
     }
 }

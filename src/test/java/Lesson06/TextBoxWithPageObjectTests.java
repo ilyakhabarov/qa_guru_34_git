@@ -14,6 +14,7 @@ public class TextBoxWithPageObjectTests extends TestBase{
     @Test
     void successFillFormTest() {
         textBoxFormPage.openPage()
+                .removeBanner()
                 .setFullName(fullName)
                 .setUserEmail(userEmail)
                 .setAddress(currentAddress)

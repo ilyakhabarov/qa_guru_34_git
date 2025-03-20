@@ -25,6 +25,7 @@ public class PracticeFormWithPageObjectTests extends TestBase {
     @Test
     void successRegistrationTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
@@ -53,6 +54,7 @@ public class PracticeFormWithPageObjectTests extends TestBase {
     @Test
     void minimalInputDataTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setGender(gender)
@@ -67,6 +69,7 @@ public class PracticeFormWithPageObjectTests extends TestBase {
     @Test
     void negativeRegistrationTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setGender(gender)
@@ -75,5 +78,4 @@ public class PracticeFormWithPageObjectTests extends TestBase {
 
         registrationPage.checkInvalidInput();
     }
-
 }
