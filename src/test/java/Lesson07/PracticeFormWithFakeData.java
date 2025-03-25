@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static Lesson07.TestData.*;
 
-public class PracticeFormWithTestData extends TestBase {
+public class PracticeFormWithFakeData extends TestBase {
 
     PracticeFormPage registrationPage = new PracticeFormPage();
 
