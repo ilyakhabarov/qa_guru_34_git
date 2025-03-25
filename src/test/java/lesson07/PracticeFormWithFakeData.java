@@ -1,6 +1,6 @@
-package Lesson07;
+package lesson07;
 
-import Lesson07.pages.PracticeFormPage;
+import lesson07.pages.PracticeFormPage;
 import org.junit.jupiter.api.Test;
 
 public class PracticeFormWithFakeData extends TestBase {

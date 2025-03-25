@@ -1,4 +1,4 @@
-package Lesson05;
+package lesson05;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.DragAndDropOptions;

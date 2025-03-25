@@ -1,7 +1,7 @@
-package Lesson07.pages;
+package lesson06.pages;
 
-import Lesson07.pages.components.CalendarComponent;
-import Lesson07.pages.components.ResultTableComponent;
+import lesson06.pages.components.CalendarComponent;
+import lesson06.pages.components.ResultTableComponent;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.cssValue;

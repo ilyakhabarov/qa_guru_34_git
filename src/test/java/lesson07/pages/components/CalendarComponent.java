@@ -1,4 +1,4 @@
-package Lesson07.pages.components;
+package lesson07.pages.components;
 
 import static com.codeborne.selenide.Selenide.$;
 

@@ -1,6 +1,6 @@
-package Lesson06;
+package lesson06;
 
-import Lesson06.pages.TextBoxFormPage;
+import lesson06.pages.TextBoxFormPage;
 import org.junit.jupiter.api.Test;
 
 public class TextBoxWithPageObjectTests extends TestBase{

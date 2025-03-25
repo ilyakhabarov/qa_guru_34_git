@@ -1,4 +1,4 @@
-package Lesson07;
+package lesson07;
 
 import com.github.javafaker.Faker;
 
