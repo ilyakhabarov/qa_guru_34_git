@@ -9,19 +9,19 @@ public class PracticeFormWithFakeData extends TestBase {
     TestData testData = new TestData();
 
     String firstName = testData.firstName,
-     lastName = testData.lastName,
-     userEmail = testData.userEmail,
-     gender = testData.gender,
-     userNumber = testData.userNumber,
-     dayOfBirth = testData.dayOfBirth,
-     monthOfBirth = testData.monthOfBirth,
-     yearOfBirth = testData.yearOfBirth,
-     subject = testData.subject,
-     hobbies = testData.hobbies,
-     uploadImage = testData.uploadImage,
-     currentAddress = testData.currentAddress,
-     state = testData.state,
-     city = testData.city;
+            lastName = testData.lastName,
+            userEmail = testData.userEmail,
+            gender = testData.gender,
+            userNumber = testData.userNumber,
+            dayOfBirth = testData.dayOfBirth,
+            monthOfBirth = testData.monthOfBirth,
+            yearOfBirth = testData.yearOfBirth,
+            subject = testData.subject,
+            hobbies = testData.hobbies,
+            uploadImage = testData.uploadImage,
+            currentAddress = testData.currentAddress,
+            state = testData.state,
+            city = testData.city;
 
     @Test
     void successRegistrationTest() {
