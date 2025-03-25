@@ -3,14 +3,28 @@ package Lesson07;
 import Lesson07.pages.PracticeFormPage;
 import org.junit.jupiter.api.Test;
 
-import static Lesson07.TestData.*;
-
 public class PracticeFormWithFakeData extends TestBase {
 
     PracticeFormPage registrationPage = new PracticeFormPage();
+    TestData testData = new TestData();
+    String firstName = testData.firstName;
+    String lastName = testData.lastName;
+    String userEmail = testData.userEmail;
+    String gender = testData.gender;
+    String userNumber = testData.userNumber;
+    String dayOfBirth = testData.dayOfBirth;
+    String monthOfBirth = testData.monthOfBirth;
+    String yearOfBirth = testData.yearOfBirth;
+    String subject = testData.subject;
+    String hobbies = testData.hobbies;
+    String uploadImage = testData.uploadImage;
+    String currentAddress = testData.currentAddress;
+    String state = testData.state;
+    String city = testData.city;
 
     @Test
     void successRegistrationTest() {
+
         registrationPage.openPage()
                 .removeBanner()
                 .setFirstName(firstName)
