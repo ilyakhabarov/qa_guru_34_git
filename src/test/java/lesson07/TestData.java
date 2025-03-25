@@ -6,44 +6,24 @@ import java.util.Locale;
 
 public class TestData {
 
-    private final Faker faker;
+    private final Faker faker = new Faker(new Locale("en-GB"));
 
-    public final String firstName,
-            lastName,
-            userEmail,
-            gender,
-            userNumber,
-            dayOfBirth,
-            monthOfBirth,
-            yearOfBirth,
-            subject,
-            hobbies,
-            uploadImage,
-            currentAddress,
-            state,
-            city;
+    public String firstName = faker.name().firstName();
+    public String lastName = faker.name().lastName();
+    public String userEmail = faker.internet().emailAddress();
+    public String gender = faker.options().option("Male", "Female", "Other");
+    public String userNumber = faker.phoneNumber().subscriberNumber(10);
+    public String dayOfBirth = String.format("%02d", faker.number().numberBetween(1, 28));
+    public String monthOfBirth = faker.options().option("January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December");
+    public String yearOfBirth = String.valueOf(faker.number().numberBetween(1990, 2023));
+    public String subject = faker.options().option("Social Studies", "Arts", "Chemistry");
+    public String hobbies = faker.options().option("Sports", "Reading", "Music");
+    public String uploadImage = faker.options().option("images/qa_guru_logo.png");
+    public String currentAddress = faker.address().streetAddress();
+    public String state = faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");
+    public String city = randomCity(state);
 
-    public TestData() {
-        this.faker = new Faker(new Locale("en-GB"));
-
-        this.firstName = faker.name().firstName();
-        this.lastName = faker.name().lastName();
-        this.userEmail = faker.internet().emailAddress();
-        this.gender = faker.demographic().sex();
-        this.userNumber = faker.phoneNumber().subscriberNumber(10);
-        this.dayOfBirth = String.format("%02d", faker.number().numberBetween(1, 29));
-        this.monthOfBirth = faker.options().option("January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December");
-        this.yearOfBirth = String.valueOf(faker.number().numberBetween(1925, 2024));
-        this.subject = faker.options().option("Maths", "English", "Physics", "Chemistry", "Biology",
-                "Computer Science", "Commerce", "Accounting", "Economics", "Arts", "Social Studies",
-                "History", "Civics");
-        this.hobbies = faker.options().option("Sports", "Reading", "Music");
-        this.uploadImage = faker.options().option("images/qa_guru_logo.png");
-        this.currentAddress = faker.address().fullAddress();
-        this.state = faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");
-        this.city = randomCity(this.state);
-    }
 
     public String randomCity(String state) {
         return switch (state) {

@@ -21,7 +21,6 @@ public class PracticeFormWithFakeData extends TestBase {
     String currentAddress = testData.currentAddress;
     String state = testData.state;
     String city = testData.city;
-
     @Test
     void successRegistrationTest() {
 
