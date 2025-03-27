@@ -1,4 +1,7 @@
-package ru.stoloto.additionalLesson;
+package ru.stoloto.additionalLesson03;
+
+// Java Base, part 2
+// Дополнительное занятие. Основы Java. Часть II. Дмитрий Тучс
 
 public class ArithmeticOperations {
     public static void main(String[] args) {
