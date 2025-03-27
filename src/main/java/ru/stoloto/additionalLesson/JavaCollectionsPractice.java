@@ -1,4 +1,4 @@
-package ru.stoloto.AdditionalLesson;
+package ru.stoloto.additionalLesson;
 
 import java.util.*;
 

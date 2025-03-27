@@ -1,4 +1,4 @@
-package ru.stoloto.AdditionalLesson;
+package ru.stoloto.additionalLesson;
 
 public class ArithmeticOperations {
     public static void main(String[] args) {
