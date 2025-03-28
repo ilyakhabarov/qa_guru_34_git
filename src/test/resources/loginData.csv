@@ -1,0 +1,4 @@
+username, password
+validUser,validPassword
+invalidUser,invalidPassword
+emptyUser,emptyPassword
