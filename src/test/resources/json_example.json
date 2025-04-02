@@ -1,0 +1,27 @@
+{
+  "company": "TechCorp",
+  "status": "success",
+  "timestamp": "2025-04-02T12:00:00Z",
+  "totalUsers": 3,
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "age": 30
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "age": 35
+    }
+  ],
+  "metadata": {
+    "source": "internal",
+    "generatedBy": "ChatGPT"
+  }
+}
