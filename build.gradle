@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 group = 'ru.stoloto'
@@ -25,10 +26,28 @@ dependencies {
             'com.opencsv:opencsv:5.9',
             'com.google.code.gson:gson:2.10.1',
             'com.fasterxml.jackson.core:jackson-core:2.18.3',
-            'com.fasterxml.jackson.core:jackson-databind:2.18.3'
+            'com.fasterxml.jackson.core:jackson-databind:2.18.3',
+            'io.qameta.allure:allure-selenide:2.30.0'
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.12.0')
+
 }
 
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
+}
+
+allure {
+    report {
+        version.set("2.30.0")
+    }
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 { //название фреймворка
+                adapterVersion.set("2.30.0") //версия интеграции фреймворка и Allure
+            }
+        }
+    }
 }
