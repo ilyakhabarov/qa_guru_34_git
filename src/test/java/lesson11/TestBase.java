@@ -6,6 +6,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import lesson11.helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -27,6 +28,11 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        ChromeOptions options = new ChromeOptions();
+
+        options.addArguments("--lang=ru-RU"); // русский
+        Configuration.browserCapabilities = options;
     }
 
     @AfterEach
