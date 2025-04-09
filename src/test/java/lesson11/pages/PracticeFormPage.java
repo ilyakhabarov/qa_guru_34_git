@@ -34,9 +34,8 @@ public class PracticeFormPage {
     }
 
     public PracticeFormPage removeBanner() {
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#adplus-anchor').remove");
+        executeJavaScript("document.querySelector('footer').remove();");
+        executeJavaScript("document.getElementById('fixedban').remove();");
         return this;
     }
 

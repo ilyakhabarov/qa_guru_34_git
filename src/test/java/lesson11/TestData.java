@@ -30,7 +30,7 @@ public class TestData {
             case "NCR" -> faker.options().option("Delhi", "Gurgaon", "Noida");
             case "Uttar Pradesh" -> faker.options().option("Agra", "Lucknow", "Merrut");
             case "Haryana" -> faker.options().option("Karnal", "Panipat");
-            case "Rajasthan" -> faker.options().option("Jaipur", "Jodhpur");
+            case "Rajasthan" -> faker.options().option("Jaipur", "Jaiselmer");
             default -> "";
         };
     }
