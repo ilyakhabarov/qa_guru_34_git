@@ -10,24 +10,27 @@ repositories {
     mavenCentral()
 }
 
+def allureVersion = "2.28.0",
+    selenideVersion = "7.8.0"
+
 compileTestJava {
     options.encoding = 'UTF-8'
 }
 
 dependencies {
     testImplementation(
-            'com.codeborne:selenide:7.8.0',
-            'com.github.javafaker:javafaker:1.0.2',
-            'org.junit.jupiter:junit-jupiter:5.12.0',
-            'org.slf4j:slf4j-simple:2.0.17',
-            'commons-io:commons-io:2.15.0',
-            'com.codeborne:pdf-test:1.5.0',
-            'com.codeborne:xls-test:1.4.3',
-            'com.opencsv:opencsv:5.9',
-            'com.google.code.gson:gson:2.10.1',
-            'com.fasterxml.jackson.core:jackson-core:2.18.3',
-            'com.fasterxml.jackson.core:jackson-databind:2.18.3',
-            'io.qameta.allure:allure-selenide:2.28.0'
+            "com.codeborne:selenide:$selenideVersion",
+            "com.github.javafaker:javafaker:1.0.2",
+            "org.junit.jupiter:junit-jupiter:5.12.0",
+            "org.slf4j:slf4j-simple:2.0.17",
+            "commons-io:commons-io:2.15.0",
+            "com.codeborne:pdf-test:1.5.0",
+            "com.codeborne:xls-test:1.4.3",
+            "com.opencsv:opencsv:5.9",
+            "com.google.code.gson:gson:2.10.1",
+            "com.fasterxml.jackson.core:jackson-core:2.18.3",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.3",
+            "io.qameta.allure:allure-selenide:$allureVersion"
     )
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.12.0')
 
@@ -39,9 +42,12 @@ test {
 }
 
 allure {
-    version.set("2.28.0")
+    version.set(allureVersion)
+    report {
+        version.set(allureVersion)
+    }
     adapter {
-        allureJavaVersion.set("2.28.0")
+        allureJavaVersion.set(allureVersion)
         aspectjVersion.set("1.9.22.1")
 
         autoconfigureListeners.set(true)
@@ -50,12 +56,28 @@ allure {
         frameworks {
             junit5 {
                 // Defaults to allureJavaVersion
-                adapterVersion.set("2.28.0")
+                adapterVersion.set(allureVersion)
                 enabled.set(true)
                 // Enables allure-junit4 default test listeners via META-INF/services/...
                 autoconfigureListeners.set(true)
             }
-
         }
+    }
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+tasks.register('demoqa_Lesson11_test', Test) {
+    useJUnitPlatform {
+        includeTags("demoqa_lesson11")
     }
 }
