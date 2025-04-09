@@ -42,24 +42,14 @@ test {
 }
 
 allure {
-    version.set(allureVersion)
     report {
         version.set(allureVersion)
     }
     adapter {
-        allureJavaVersion.set(allureVersion)
-        aspectjVersion.set("1.9.22.1")
-
-        autoconfigureListeners.set(true)
         aspectjWeaver.set(true)
-
         frameworks {
             junit5 {
-                // Defaults to allureJavaVersion
                 adapterVersion.set(allureVersion)
-                enabled.set(true)
-                // Enables allure-junit4 default test listeners via META-INF/services/...
-                autoconfigureListeners.set(true)
             }
         }
     }
