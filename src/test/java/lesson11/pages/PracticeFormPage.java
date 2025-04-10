@@ -107,7 +107,7 @@ public class PracticeFormPage {
         userNumberInput.shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
     }
 
-    public PracticeFormPage checkResult(String key, String value){
+    public PracticeFormPage checkResult(String key, String value) {
         resultTableComponent.checkResult(key, value);
         return this;
     }
