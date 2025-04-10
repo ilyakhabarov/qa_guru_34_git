@@ -26,8 +26,9 @@ public class PracticeFormWithFakeData extends TestBase {
 
     @Test
     @Tag("demoqa_lesson11")
-    void successRegistrationTest() {
+    void successRegistrationTest() throws InterruptedException {
 
+        Thread.sleep(3000);
         registrationPage.openPage()
                 .removeBanner()
                 .setFirstName(firstName)
