@@ -34,8 +34,9 @@ public class PracticeFormPage {
     }
 
     public PracticeFormPage removeBanner() {
-        executeJavaScript("document.querySelector('footer').remove();");
-        executeJavaScript("document.getElementById('fixedban').remove();");
+        executeJavaScript("$('#fixedban').remove()"); // Удаляет рекламные баннеры
+        executeJavaScript("$('footer').remove()"); // Удаляет футер
+        executeJavaScript("document.querySelectorAll('iframe').forEach(el => el.remove())"); // Удаляет все iframe
         return this;
     }
 
