@@ -66,8 +66,8 @@ tasks.withType(Test) {
     }
 }
 
-task demoqa_Lesson11_test(type: Test) {
+task demoqa_Lesson12_test(type: Test) {
     useJUnitPlatform {
-        includeTags("demoqa_lesson11")
+        includeTags("demoqa_lesson12")
     }
 }

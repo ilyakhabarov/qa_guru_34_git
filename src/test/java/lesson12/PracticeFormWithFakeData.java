@@ -25,7 +25,7 @@ public class PracticeFormWithFakeData extends TestBase {
             city = testData.city;
 
     @Test
-    @Tag("demoqa_lesson11")
+    @Tag("demoqa_lesson12")
     void successRegistrationTest() {
 
         registrationPage.openPage()
@@ -56,7 +56,7 @@ public class PracticeFormWithFakeData extends TestBase {
     }
 
     @Test
-    @Tag("demoqa_lesson11")
+    @Tag("demoqa_lesson12")
     void minimalInputDataTest() {
         registrationPage.openPage()
                 .removeBanner()
@@ -72,7 +72,7 @@ public class PracticeFormWithFakeData extends TestBase {
     }
 
     @Test
-    @Tag("demoqa_lesson11")
+    @Tag("demoqa_lesson12")
     void negativeRegistrationTest() {
         registrationPage.openPage()
                 .removeBanner()

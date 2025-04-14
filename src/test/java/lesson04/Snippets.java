@@ -1,3 +1,5 @@
+package lesson04;
+
 import com.codeborne.selenide.*;
 import org.openqa.selenium.*;
 
