@@ -13,13 +13,13 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
-        Configuration.browserSize = System.getProperty("browserSize", "1280x720");
+        Configuration.browser = System.getProperty("BROWSER", "chrome");
+        Configuration.browserVersion = System.getProperty("BROWSER_VERSION", "128.0");
+        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1280x720");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 //        Configuration.holdBrowserOpen = true;
-        Configuration.remote = System.getProperty("remoteUrl");
+        Configuration.remote = System.getProperty("REMOTE_URL");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
