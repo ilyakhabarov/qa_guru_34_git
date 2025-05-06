@@ -1,3 +1,3 @@
 QA.GURU repo, 34
-All homeworks
+UI homeworks and tests
 2025
